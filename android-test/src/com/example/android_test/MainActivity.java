@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 			}
 		});
         
-        //Õâ¸öÀûÓÃµÄÊÇactivity_main.xmlÎÄ¼ş
+      //è¿™ä¸ªåˆ©ç”¨çš„æ˜¯activity_main.xmlæ–‡ä»¶
         setContentView(R.layout.activity_main);
         
 //        setContentView(tv);
@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
     }
     
     /**
-     * µã»÷ÊÂ¼ş£¬Áª¶¯
+     * ç‚¹å‡»äº‹ä»¶ï¼Œè”åŠ¨
      * @param view
      */
     public void showContent(View view){
