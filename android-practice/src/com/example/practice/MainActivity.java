@@ -1,7 +1,11 @@
 package com.example.practice;
 
+<<<<<<< HEAD:android-practice/src/com/example/practice/MainActivity.java
 import com.example.practice.R;
 import com.example.practice.remote.HttpUtils;
+=======
+import com.example.android_test.R;
+>>>>>>> 33cb145cba214117be211e7f60e35e405882e0a2:android-practice/src/com/example/practice/MainActivity.java
 
 import android.os.Bundle;
 import android.app.Activity;
