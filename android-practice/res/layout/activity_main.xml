@@ -22,16 +22,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="37dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:onClick="showContent"
-        android:text="Button" />
-
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
@@ -40,5 +30,25 @@
         android:layout_centerVertical="true"
         android:ems="10"
         android:text="我要" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="40dp"
+        android:onClick="showContent"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/editText1"
+        android:onClick="getRemoteData"
+        android:text="get remote data" />
 
 </RelativeLayout>
