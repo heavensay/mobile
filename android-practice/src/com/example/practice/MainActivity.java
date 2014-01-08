@@ -1,4 +1,6 @@
-package com.example.android_test;
+package com.example.practice;
+
+import com.example.android_test.R;
 
 import android.os.Bundle;
 import android.app.Activity;
