@@ -15,10 +15,40 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.util.EntityUtils;
 
+import com.example.practice.MainActivity;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 
 public class HttpUtils {
-	public static  void post(final String requestUrl, final List<NameValuePair> parmMap) {
+	
+	public static void postRequest(final Handler handler,final Activity activity,final String requestUrl, final List<NameValuePair> parmMap){
+		
+		Thread thread = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				final String result = post2(requestUrl, parmMap);
+				
+				handler.post(new Runnable() {
+					@Override
+					public void run() {
+						//NetworkOnMainThreadException
+						//String result = post2(requestUrl, parmMap);
+						new AlertDialog.Builder(activity)
+								.setTitle("弹出框").setTitle(result)
+								.setNegativeButton("确定", null).show();
+					}
+				});
+			}
+		});
+		thread.start();
+	}
+	
+	
+	private static  void post(final String requestUrl, final List<NameValuePair> parmMap) {
 		try {
 			HttpPost httpRequest = new HttpPost(requestUrl);
 			HttpEntity entity = new UrlEncodedFormEntity(parmMap);
@@ -49,12 +79,12 @@ public class HttpUtils {
 		}
 	}
 	
-	public static String post2(final String requestUrl, final List<NameValuePair> parmMap) {
+	private static String post2(final String requestUrl, final List<NameValuePair> parmMap) {
 		String result = null;
 		try {
 			HttpPost httpRequest = new HttpPost(requestUrl);
-			HttpEntity entity = new UrlEncodedFormEntity(parmMap);
-			httpRequest.setEntity(entity);
+//			HttpEntity entity = new UrlEncodedFormEntity(parmMap);
+//			httpRequest.setEntity(entity);
 			HttpClient client = new DefaultHttpClient();
 			// 请求超时
 			client.getParams().setParameter(

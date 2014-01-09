@@ -47,8 +47,26 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
+        android:layout_alignRight="@+id/timePicker1"
         android:onClick="getRemoteData"
         android:text="get remote data" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="20dp"
+        android:text="打电话" />
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="android.app.DialogFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignTop="@+id/toggleButton1"
+        android:layout_marginTop="14dp" />
 
 </RelativeLayout>
