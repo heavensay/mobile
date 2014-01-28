@@ -1,5 +1,7 @@
 package com.example.practice;
 
+import java.util.zip.Inflater;
+
 import com.example.practice.R;
 import com.example.practice.remote.HttpUtils;
 
@@ -7,14 +9,24 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.R.anim;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
+import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,7 +62,6 @@ public class MainActivity extends Activity {
       //这个利用的是activity_main.xml文件
         setContentView(R.layout.activity_main);
         editText = (EditText)findViewById(R.id.editText1);
-
     }
 
 
@@ -106,6 +117,4 @@ public class MainActivity extends Activity {
          Toast.makeText(this, "不能输入为空", Toast.LENGTH_LONG).show(); 
         } 
 	}
-	
-    
 }
