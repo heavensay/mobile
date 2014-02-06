@@ -13,6 +13,7 @@ import android.R.anim;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Matrix;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,6 +24,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
@@ -62,6 +64,17 @@ public class MainActivity extends Activity {
       //这个利用的是activity_main.xml文件
         setContentView(R.layout.activity_main);
         editText = (EditText)findViewById(R.id.editText1);
+        
+        ImageView iv1 = (ImageView)findViewById(R.id.iv1);
+        iv1.setImageResource(R.drawable.face);
+    
+        Matrix matrix = new Matrix();
+//        final float f[] = {1.0F,0.0F,0.0F,0.0F,-1.0F,120.0F,0.0F,0.0F,1.0F}; 
+        float f[]= { 0.866F,  -0.5F, 63.4F,0.5F, 0.866F,-36.6F,0.0F,    0.0F,  1.0F }; 
+        matrix.setValues(f);
+        iv1.setImageMatrix(matrix);
+        
+        
     }
 
 

@@ -31,7 +31,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/button2"
         android:ems="10"
-        android:text="我要" >
+        android:text="我要..." >
 
         <requestFocus />
     </EditText>
@@ -43,7 +43,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/editText1"
         android:onClick="showContent"
-        android:text="Button" />
+        android:text="showContent" />
 
     <ToggleButton
         android:id="@+id/toggleButton1"
@@ -52,5 +52,18 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/button1"
         android:text="打电话" />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton1"
+        android:layout_below="@+id/toggleButton1"
+        android:layout_marginTop="24dp"
+        />
+    <!--	android:src="@drawable/face"
+     longshuai.png为图片的名称，记在资源文件里头，不用文件名后缀
+    注意：强调一下，资源文件的图片命名规则比较严格，由[a-z]和数字和“_”组成，而且不能数字开头，我就常犯傻，命名老是数字或者大写字母开头
+    -->
 
 </RelativeLayout>
